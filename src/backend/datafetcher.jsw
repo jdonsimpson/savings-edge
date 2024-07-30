@@ -1,0 +1,12 @@
+import { getJSON,fetch } from 'wix-fetch';
+
+// GET call using getJSON
+export async function getWeather() {
+    const response = await getJSON('https://api.restful-api.dev/objects/4');
+    //const response = await getJSON('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=7765554dd0c3e8d4b73f9c7ad5905817')
+    return response;
+    /*fetch("https://api.restful-api.dev/objects/4")
+  .then((response) => response.json()).
+  then(data => console.log(data))
+  .catch((err) => console.log(err));*/
+}
